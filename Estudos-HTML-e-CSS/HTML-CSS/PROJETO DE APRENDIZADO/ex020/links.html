@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: darkred;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: blue;
+        }
+
+        a::before {
+
+        }
+
+        a::after {
+            
+        }
+
+        .importante::before {
+           content: "→ " ; 
+        }
+
+        .importante::after {
+            content: " ←" ;
+        }
+
+        .importante {
+            background-color: rgba(255, 0, 0, 0.428);
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <a target="_blank" href="https://github.com/DevNaje">
+            <li>Repositório GitHub</li>
+        </a>
+        <a  target="_blank" href="https://www.linkedin.com/in/lucas-santos-415a72218/">
+            <li class="importante">Linkedin</li>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/reativandoavida/#">
+            <li>Instagram</li>
+        </a>
+    </ul>
+
+</body>
+</html>
