@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é Brasileiro ?</title>
+</head>
+<body>
+
+    <h1>Eu preciso saber se você é Brasileiro para continuar</h1>
+
+<label for="pais">Selecione o seu País</label>
+<select id="pais" name="pais">
+    <option value="">--Selecione--</option>
+    <option value="Brasil">Brasil</option>
+    <option value="Portugal">Portugal</option>
+    <option value="Angola">Angola</option>
+    <option value="Moçambique">Moçambique</option>
+    <option value="Estados Unidos">Estados Unidos</option>
+    <option value="outro">Outro</option>
+</select>
+<div id="resultado">
+    <p id="mensagem"></p>
+    
+</div>
+
+<script>
+    window.document.querySelector("#pais").addEventListener("change", function() {
+        var pais = this.value;
+        if (pais == "Brasil") {
+            document.getElementById("mensagem").innerText = "Você é Brasileiro!";
+        } else if (pais == 'Moçambique') {
+            document.getElementById("mensagem").innerText = "Você é estrangeiro!";
+        } else {
+            document.getElementById("mensagem").innerText = "Você é estrangeiro!";
+        }
+    })
+</script>
+
+    
+</body>
+</html>

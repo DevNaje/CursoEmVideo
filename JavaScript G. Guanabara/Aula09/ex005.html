@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo a usar DOM</title>
+    <style>
+        body {
+            background-color: gray;
+            color:  whitesmoke;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1 >Document Object Model</h1>
+
+    <p>apenas um texto de exemplo</p>
+
+    <p>texto <strong>2</strong> de exemplo</p>
+
+    <div id="materia" class="materia">
+        texto 3 de exemplo
+    </div>
+
+    <script>
+        // var corpo = window.document.body
+        // corpo.style.background = 'black'
+
+        var nomemateria = window.document.getElementById('materia')
+        var nomemateriac = window.document.getElementsByClassName('materia')
+        var nomemateriaq = window.document.querySelector('div#materia')
+        var nomemateriaqs = window.document.querySelector('div.materia')
+        nomemateriaq.innerHTML = 'olá, mundo!'
+        nomemateriaqs.style.background = 'darkgray'
+        nomemateriaq.style.color = 'darkred'
+        //document.write(nomemateria.innerText)
+        //nomemateria.innerText = "olá, mundo!"
+        //nomemateria.style.color = 'red'
+        //nomemateria.style.background ='darkgray'
+        //nomem
+    </script>
+
+</body>
+</html>

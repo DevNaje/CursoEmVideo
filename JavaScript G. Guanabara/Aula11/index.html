@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Unico de Saude</title>
+</head>
+<body>
+    
+<label for="doenca">Selecione a sua Doença</label>
+<select name="doenca" id="doenca">
+    <option value="dor_cabeca">Dor de cabeça</option>
+    <option value="febre">Febre</option>
+    <option value="dor_barriga">Dor de barriga</option>
+    <option value="dor_cotovelo">Dor de cotovelo</option>
+    <option value="garganta_doendo">Garganta doendo</option>
+    <option value="tontura">Tontura</option>
+    <option value="outro">Outro</option>
+</select>
+
+<script>
+    window.document.querySelector("#doenca").addEventListener("chance", function() {
+        var doenca = this.value; 
+        if (doenca == dor_cabeca) {
+            document.write("Dipitona de 6 em 6 horas")
+        } else if (doenca == febre) {
+            document.write("Dipirona de 6 em 6 horas")
+        } else if (doenca == dor_barriga) {
+            document.write("Buscopan de 8 em 8 horas")
+        } else if (doenca == dor_cotovelo) {
+            document.write("Gelol a cada 4 horas")
+        } else if (doenca == garganta_doendo) {
+            document.write("Pastilha para garganta a cada 6 horas")
+        } else if (doenca == tontura) {
+            document.write("Dramin a cada 8 horas")
+        } else if (doenca == outro) {
+            document.write("Procure um médico")
+        }
+
+    }
+
+)
+
+</script>
+
+
+</body>
+</html>

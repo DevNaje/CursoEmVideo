@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+        <header>
+            <h1>VERIFICADOR DE IDADE</h1>
+        </header>
+    
+    <main>
+        <section>
+            <div id="dados">
+                <h2>Preencha os Dados abaixo para consultar sua idade</h2>
+                <p>Ano de nascimento: 
+                <input number="ano" id="txtano" placeholder="Digite seu ano de nascimento" min="1900" max="2025" required>
+                </p>
+                <p>Sexo:
+                    <input type="radio" name="sex" id="mas" checked>
+                    <label for="mas">Masculino</label >
+                    <input type="radio" name="sex" id="fem">
+                    <label for="fem">Feminino</label>
+                </p>
+                <p>
+                    <input type="button" value="Verificar" onclick="verificar()">
+                </p>
+            </div>
+            <div id="res">
+                
+                Clique no botão acima para verificar sua idade!
+            </div>
+            <div id="mensagem">
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+            &copy; Desenvolvido por: <a href="https://github.com/DevNaje">Lucas dos Santos da Silva</a>
+    </footer>
+    <script src="Script.js"></script>
+
+</body>
+</html>
