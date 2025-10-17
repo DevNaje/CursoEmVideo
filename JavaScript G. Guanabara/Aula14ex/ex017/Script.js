@@ -1,42 +1,52 @@
-function verificar() {
-var anoatual = new Date().getFullYear();
-var ano = document.querySelector('input#txtano').value;
-var res = document.querySelector('div#res'); // Use 'res' to display the result
-if (ano.length == 0 || Number(ano) > anoatual) {
-    window.alert('[ERRO] Verifique o ano de nascimento e tente novamente !');
-} else { 
-    var sexf = document.getElementsByName('sex');
-    var idade = anoatual - Number(ano);
-    var genero = '';
-    var img = document.createElement('img'); // Create an image element
-    img.setAttribute('id', 'foto'); // Set the id for the image
-} 
-if (sexf[0].checked) {
-    genero = 'Homem';
-    if (idade >= 0 && idade < 11) {
-        img.setAttribute('src', 'imagens/homem-criança.jpg');
-    } else if (idade < 18) {
-        img.setAttribute('src', 'imagens/homem-jovem.jpg');
-    } else if (idade < 60) {
-        img.setAttribute('src', 'imagens/homem-adulto.jpg');
+function tabuada() {
+    const num = document.getElementById('txtn');
+    const tab = document.getElementById('seltab');
+    if (num.value.length == 0) {
+        window.alert("Por favor, digite um numero!")
     } else {
-        img.setAttribute('src', 'imagens/homem-idoso.jpg');
+        let n = Number(num.value)
+        tab.innerHTML = ''
+        for (let c = 1; c <= 10 ; c++) {
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n*c}`
+            tab.appendChild(item)
+        }
     }
-} else if (sexf[1].checked) {
-    genero = 'Mulher';
-    if (idade >= 0 && idade < 11) {
-        img.setAttribute('src', 'imagens/mulher-criança.jpg');
-    } else if (idade < 18) {
-        img.setAttribute('src', 'imagens/mulher-jovem.jpg');
-    } else if (idade < 60) {
-        img.setAttribute('src', 'imagens/mulher-adulto.jpg');
-    } else {
-        img.setAttribute('src', 'imagens/mulher-idoso.jpg');
-    }
-
-}      
-    res.innerHTML = `Detectamos ${genero} com ${idade} anos.`;  
-    res.appendChild(img);
-
 }
- 
+
+function cleanTab() {
+    const num = document.getElementById('txtn');
+    const tab = document.getElementById('seltab');
+    if (num.value.length >= 0) {
+        tab.innerHTML = ''
+    }
+}
+
+function raiz() {
+    const num = document.getElementById('txtn2');
+    const tab = document.getElementById('seltab2');
+    if (num.value.length == 0) {
+        window.alert("Por favor, digite um numero!")
+    } else {
+        let n = Number(num.value);
+        let raiz = Math.sqrt(n);
+        let raizFormat
+        if (Number.isInteger(raiz)) {
+            raizFormat = raiz;
+        } else {
+            raizFormat = raiz.toFixed(3);
+        }
+        tab.innerHTML = '';
+        let item = document.createElement('option');
+        item.text = `√${n} = ${raizFormat}`;
+        tab.appendChild(item);
+    }
+}
+
+function cleanRaiz() {
+    const num = document.getElementById('txtn2');
+    const tab = document.getElementById('seltab2');
+    if (num.value.length >= 0) {
+        tab.innerHTML = ''
+    }
+}

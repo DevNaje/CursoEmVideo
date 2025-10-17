@@ -1,48 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de Idade</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-        <header>
-            <h1></h1>
-        </header>
-    
-    <main>
-        <section>
-            <div id="dados">
-                <h2></h2>
-                <p>Ano de nascimento: 
-                <input number="ano" id="txtano" placeholder="Digite seu ano de nascimento" min="1900" max="2025" required>
-                </p>
-                <p>Sexo:
-                    <input type="radio" name="sex" id="mas" checked>
-                    <label for="mas">Masculino</label >
-                    <input type="radio" name="sex" id="fem">
-                    <label for="fem">Feminino</label>
-                </p>
-                <p>
-                    <input type="button" value="Verificar" onclick="verificar()">
-                </p>
-            </div>
-            <div id="res">
-                
-                Clique no botão acima para verificar sua idade!
-            </div>
-            <div id="mensagem">
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        
+        <!-- Tabuada -->
+        <div>
+            <p>Número: 
+                <input type="number" name="num" id="txtn">
+                <input type="button" value="Gerar Tabuada" class="btn" onclick="tabuada()">
+                <input type="button" value="Limpar Número"  onclick="cleanTab()" class="btn">
+            </p>
+        </div>
 
-            </div>
-        </section>
-    </main>
+        <div>
+            <p name="tabuada" id="seltab" class="seltab" size="10"></p>
+        </div>
 
-    <footer class="rodape">
-            &copy; Desenvolvido por: <a href="https://github.com/DevNaje">Lucas dos Santos da Silva</a>
-    </footer>
-    <script src="Script.js"></script>
+        <!-- Raiz -->
+        <div>
+            <p>Número: 
+                <input type="number" name="num" id="txtn2">
+                <input type="button" value="Gerar Raiz" class="btn" onclick="raiz()">
+                <input type="button" value="Limpar Número"  onclick="cleanRaiz()" class="btn">
+            </p>
+        </div>
+        <option value="">
+        </option>
+        <div>
+            <p name="RaizQuadrada" id="seltab2" class="seltab" size="1"></p>
+        </div>
 
+    </section>
+    <footer>
+            <p> &copy; Lucas dos Santos</p>
+        </footer>
+    <script src="script.js"></script>
 </body>
 </html>
